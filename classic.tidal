@@ -42,11 +42,11 @@ jumpIn 4 0 $ s "toys:8/4" # note "a4" # lpf 750
 
 do
   jumpIn 1 0 $ stack [
-      fast 2 $ n "3 0 1 0" # s "dr2",
-      f $
-      every 2 f $
-      n "~_ [~ 5 ~_] ~_" # s "dr2"
-      ]
+    fast 2 $ n "3 0 1 0" # s "dr2",
+    f $
+    every 2 f $
+    n "~_ [~ 5 ~_] ~_" # s "dr2"
+    ]
 --
   xfadeIn 7 16 $ s "sid:1*12" # up (36+(2*sine - 4)) # gain 0.725 # pan isaw
 --    # sc
