@@ -4,6 +4,7 @@ let bpms num = setcps(num/60/4)
     h = hush
     f = degradeBy 1
     sc = silence
+    sr num = (num ~>)
     sr1 = (1 ~>)
 
 h
@@ -51,7 +52,7 @@ do
   xfadeIn 7 16 $ s "sid:1*12" # up (36+(2*sine - 4)) # gain 0.725 # pan isaw
 --    # sc
 
-jumpIn 3 0 $ s "wobble*2" # note "a4" # lpf 950 # crush ((2 ~>) $ slow 4 $ range 4 5.85 isaw)
+jumpIn 3 0 $ s "wobble*2" # note "a4" # lpf 950 # crush (sr 2 $ slow 4 $ range 4 5.85 isaw)
   # sc
 
 jumpIn 1 0 $ sc
